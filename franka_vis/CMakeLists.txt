@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(franka_visualization)
+project(franka_vis)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -56,8 +56,8 @@ if(CLANG_TOOLS)
     ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/*.h
   )
-  add_format_target(franka_visualization FILES ${SOURCES} ${HEADERS})
-  add_tidy_target(franka_visualization
+  add_format_target(franka_vis FILES ${SOURCES} ${HEADERS})
+  add_tidy_target(franka_vis
     FILES ${SOURCES}
     DEPENDS ${EXECUTABLES}
   )
